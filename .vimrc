@@ -37,7 +37,7 @@ set history=500		" keep 500 lines of command line history
 set showcmd		" display incomplete commands
 set showmatch
 set nowrap
-colorscheme jellybeans
+"colorscheme jellybeans
 highlight StatusLine ctermfg=blue ctermbg=yellow
 set nofoldenable " Say no to code folding...
 highlight SignColumn ctermbg=black
