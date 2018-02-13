@@ -20,7 +20,9 @@ set autoread
 set wmh=0
 set viminfo+=!
 set guioptions-=T
-set guifont=Triskweline_10:h12
+set t_CO=256"Use 256 colors "This is useful for Terminal Vim.
+set guifont=Fira_Code:h17
+"set guifont=Triskweline_10:h12
 set et
 set sw=2
 set smarttab
