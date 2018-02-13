@@ -1,47 +1,48 @@
-set nocompatible              						"We want the latest Vim settings/options.
+set nocompatible " Required by vundle
+filetype off     " Required by vundle
 
 so ~/.vim/plugins.vim
 
 syntax enable
 set backspace=indent,eol,start                                          "Make backspace behave like every other editor.
-let mapleader = ',' 						    	  "The default is \, but a comma is much better.
-set number								"Let's activate line numbers.
-set noerrorbells visualbell t_vb=               			"No damn bells!
-set autowriteall                                                        "Automatically write the file when switching buffers.
-set complete=.,w,b,u 							"Set our desired autocompletion matching.
-set tabstop=8
-set expandtab
-
+let mapleader = ',' 						    	"The default is \, but a comma is much better.
+set number
 
 
 "-------------Visuals--------------"
-colorscheme atom-dark
-set t_CO=256								          "Use 256 colors. This is useful for Terminal Vim.
-set guifont=Fira\ Code:h14						"Set the default font family and size.
-set guioptions-=e							        "We don't want Gui tabs.
-
-set guioptions-=l                     "Disable Gui scrollbars.
-set guioptions-=L
-set guioptions-=r
-set guioptions-=R
-
-"We'll fake a custom left padding for each window.
-hi LineNr guibg=bg
-set foldcolumn=2
-hi foldcolumn guibg=bg
-
-"Get rid of ugly split borders.
-hi vertsplit guifg=bg guibg=bg
-set laststatus=2  "Always show status line.
+set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set history=500		" keep 500 lines of command line history
+set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set showmatch
 set nowrap
-"colorscheme jellybeans
-highlight StatusLine ctermfg=blue ctermbg=yellow
-set nofoldenable " Say no to code folding...
-highlight SignColumn ctermbg=black
+set autoread
+set wmh=0
+set viminfo+=!
+set guioptions-=T
+set guifont=Triskweline_10:h12
+set et
+set sw=2
+set smarttab
+set noincsearch
+set ignorecase smartcase
+set laststatus=2  " Always show status line.
+set relativenumber
+set number
+set gdefault " assume the /g flag on :s substitutions to replace all matches in a line
+set autoindent " always set autoindenting on
+set lazyredraw " Don't redraw screen when running macros.
 
+colorscheme jellybeans
+" Better? completion on command line
+set wildmenu
+" What to do when I press 'wildchar'. Worth tweaking to see what feels right.
+set wildmode=list:full
+
+" (Hopefully) removes the delay when hitting esc in insert mode
+set noesckeys
+set ttimeout
+set ttimeoutlen=1
 
 
 "-------------Search--------------"
